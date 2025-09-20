@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US 1.1 - Contagem de Elementos Visuais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de Carregamento -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-spinner"></div>
+        <h1>Carregando Jogo na Selva...</h1>
+        <p>Preparando sua aventura de contagem!</p>
+    </div>
+
+    <!-- Tela Inicial -->
+    <div id="home-screen" class="screen hidden">
+        <div class="home-container">
+            <div class="header">
+                <h1>🍌 Contagem na Selva 🍌</h1>
+                <p class="subtitle">US 1.1 - Contagem de Elementos Visuais</p>
+            </div>
+            <div class="academy-logo">
+                <p>Desenvolvido para a Byte & Read Academy</p>
+            </div>
+            <div class="instructions">
+                <h2>Como Jogar:</h2>
+                <ul>
+                    <li>1. Observe a quantidade de bananas na árvore.</li>
+                    <li>2. Escolha o número correto entre as opções.</li>
+                    <li>3. Acerte para ganhar pontos e avançar!</li>
+                </ul>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Começar a Contar!</button>
+        </div>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <h2 id="question-counter">Questão 1</h2>
+            <div class="game-info">
+                <span>Pontos: <span id="score">0</span></span>
+            </div>
+        </div>
+        <div class="game-content">
+            <div class="question-area">
+                <h3 id="question-text">Quantas bananas você vê na árvore?</h3>
+                <div id="bananas-container" class="bananas-display">
+                    <!-- Bananas aparecerão aqui -->
+                </div>
+            </div>
+            <div class="options-area">
+                <h4>Escolha a resposta:</h4>
+                <div id="options-container" class="options-grid">
+                    <!-- Opções aparecerão aqui -->
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="hint-btn" class="btn btn-secondary">Dica</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Feedback -->
+    <div id="feedback-screen" class="screen hidden">
+        <div class="feedback-container">
+            <span id="feedback-icon" class="feedback-icon"></span>
+            <h2 id="feedback-title"></h2>
+            <p id="feedback-message"></p>
+            <p id="correct-answer-display" class="correct-answer hidden">A resposta correta era: <span id="correct-number"></span></p>
+            <button id="continue-btn" class="btn btn-primary">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Tela de Estatísticas -->
+    <div id="stats-screen" class="screen hidden">
+        <div class="stats-container">
+            <h2>Suas Estatísticas</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span id="total-questions" class="stat-number">0</span>
+                    <span class="stat-label">Questões</span>
+                </div>
+                <div class="stat-item">
+                    <span id="correct-answers" class="stat-number">0</span>
+                    <span class="stat-label">Acertos</span>
+                </div>
+                <div class="stat-item">
+                    <span id="accuracy" class="stat-number">0%</span>
+                    <span class="stat-label">Precisão</span>
+                </div>
+                <div class="stat-item">
+                    <span id="total-score" class="stat-number">0</span>
+                    <span class="stat-label">Pontuação Total</span>
+                </div>
+            </div>
+            <div class="stats-actions">
+                <button id="play-again-btn" class="btn btn-primary">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Dica -->
+    <div id="hint-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Dica!</h3>
+            <p>Lembre-se de contar cada banana com atenção. Use o dedo ou o mouse para apontar para cada uma enquanto conta!</p>
+            <button id="close-hint-btn" class="btn btn-primary">Entendi!</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
